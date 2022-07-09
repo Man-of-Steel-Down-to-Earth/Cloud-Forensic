@@ -1,0 +1,23 @@
+﻿<Page x:Class="CAF.View.Pages.CallRecord"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CAF.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="CallRecord">
+
+    <Grid>
+        <ListView Name="CallRecordList">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="手机号" DisplayMemberBinding="{Binding PhoneNumber}" />
+					<GridViewColumn Header="来电/去电" DisplayMemberBinding="{Binding Direction}" />
+					<GridViewColumn Header="电话时间" DisplayMemberBinding="{Binding PhoneTime}" />
+					<GridViewColumn Header="通话持续时间" DisplayMemberBinding="{Binding LastTime}" />
+				</GridView>
+			</ListView.View>
+		</ListView>
+    </Grid>
+</Page>
